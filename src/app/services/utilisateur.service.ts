@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UtilisateurService {
-  private baseUrl=environment.apiBaseUrl
+  private baseUrl=environment.apiBaseUrl+"utilisateurs"
   //Injecter dépendance qui permet d'utiliser vernes http
   constructor(private httpClient:HttpClient) { }
 
