@@ -1,7 +1,7 @@
 export class Utilisateur {
-    idUtilisateur!:number;
-	nomUtilisateur!:string;
-	prenomUtilisateur!:string;
+    id!:number;
+	nom!:string;
+	prenom!:string;
 	username!:string;
 	password!:string;
 }

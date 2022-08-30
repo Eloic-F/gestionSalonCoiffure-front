@@ -11,12 +11,12 @@
               <div class="row">
                 <div class="col-md-6">
                   <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Prénom" type="text" name="prenomUtilisateur" [(ngModel)]="utilisateur.prenomUtilisateur">
+                    <input matInput placeholder="Prénom" type="text" name="prenom" [(ngModel)]="utilisateur.prenom">
                   </mat-form-field>
                 </div>
                 <div class="col-md-6">
                   <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Nom" type="text" name="nomUtilisateur" [(ngModel)]="utilisateur.nomUtilisateur">
+                    <input matInput placeholder="Nom" type="text" name="nom" [(ngModel)]="utilisateur.nom">
                   </mat-form-field>
                 </div>
               </div>
@@ -53,16 +53,16 @@
                 <tbody>
                   <tr  *ngFor="let u of users">
                     <td>
-                      {{u.idUtilisateur}}
+                      {{u.id}}
                     </td>
                     <td>
-                      {{u.nomUtilisateur}}
+                      {{u.nom}}
                     </td>
                     <td>
-                      {{u.prenomUtilisateur}}
+                      {{u.prenom}}
                     </td>
                     <td>
-                      <button (click)="deleteUtilisateur(u.idUtilisateur)" class="btn btn-danger">Supprimer</button>
+                      <button (click)="deleteUtilisateur(u.id)" class="btn btn-danger">Supprimer</button>
                     </td>
                   </tr>
                 </tbody>
