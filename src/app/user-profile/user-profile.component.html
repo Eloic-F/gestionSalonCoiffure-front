@@ -19,6 +19,11 @@
                     <input matInput placeholder="Nom" type="text" name="nom" [(ngModel)]="utilisateur.nom">
                   </mat-form-field>
                 </div>
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Date de naissance" type="date" name="dateNaissance" [(ngModel)]="utilisateur.dateNaissance">
+                  </mat-form-field>
+                </div>
               </div>
               <button mat-raised-button class="btn btn-danger pull-right">Ajouter</button>
               <div class="clearfix"></div>
@@ -47,6 +52,9 @@
                     Prénom
                   </th>
                   <th>
+                    Date de naissance
+                  </th>
+                  <th>
                     Action
                   </th>
                 </thead>
@@ -60,6 +68,9 @@
                     </td>
                     <td>
                       {{u.prenom}}
+                    </td>
+                    <td>
+                      {{u.dateNaissance}}
                     </td>
                     <td>
                       <button (click)="deleteUtilisateur(u.id)" class="btn btn-danger">Supprimer</button>
