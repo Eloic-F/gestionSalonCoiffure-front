@@ -8,6 +8,8 @@ import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { UtilisateurService } from './services/utilisateur.service';
+import { ReservationService } from './services/reservation.service';
+import { AvisService } from './services/avis.service';
 
 @NgModule({
   imports: [
@@ -24,7 +26,7 @@ import { UtilisateurService } from './services/utilisateur.service';
     AdminLayoutComponent,
 
   ],
-  providers: [UtilisateurService],
+  providers: [UtilisateurService,ReservationService,AvisService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
