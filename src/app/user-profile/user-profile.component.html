@@ -1,0 +1,76 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">Ajouter un utilisateur</h4>
+          </div>
+          <div class="card-body">
+            <form (ngSubmit)="addUtilisateur()">
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Prénom" type="text" name="prenomUtilisateur" [(ngModel)]="utilisateur.prenomUtilisateur">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Nom" type="text" name="nomUtilisateur" [(ngModel)]="utilisateur.nomUtilisateur">
+                  </mat-form-field>
+                </div>
+              </div>
+              <button mat-raised-button class="btn btn-danger pull-right">Ajouter</button>
+              <div class="clearfix"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title ">Table des utilisateurs</h4>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table">
+                <thead class=" text-primary">
+                  <th>
+                    ID
+                  </th>
+                  <th>
+                    Nom
+                  </th>
+                  <th>
+                    Prénom
+                  </th>
+                  <th>
+                    Action
+                  </th>
+                </thead>
+                <tbody>
+                  <tr  *ngFor="let u of users">
+                    <td>
+                      {{u.idUtilisateur}}
+                    </td>
+                    <td>
+                      {{u.nomUtilisateur}}
+                    </td>
+                    <td>
+                      {{u.prenomUtilisateur}}
+                    </td>
+                    <td>
+                      <button (click)="deleteUtilisateur(u.idUtilisateur)" class="btn btn-danger">Supprimer</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
